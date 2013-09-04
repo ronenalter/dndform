@@ -1,0 +1,40 @@
+html, body{ height:100%; }
+body{text-align: center}
+#wrap{
+    min-width:600px;
+    height:100%;
+    position:relative;
+    background:-webkit-radial-gradient(#205983, #0A2742);
+    background:radial-gradient(#205983, #0A2742);
+    overflow:hidden;
+}
+
+@font-face {
+  font-family: 'Fjalla One';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Fjalla One'), local('FjallaOne-Regular'), url(http://themes.googleusercontent.com/static/fonts/fjallaone/v1/rxxXUYj4oZ6Q5oDJFtEd6hsxEYwM7FgeyaSgU71cLG0.woff) format('woff');
+}
+
+*{ margin:0; padding:0; }
+
+
+.fancyInput{
+    margin: 10px 5px;
+    width:20px;
+    max-width: 22px;
+    font-size:14px;
+    color:#FFF;
+    vertical-align:middle;
+    line-height:1.3;
+    overflow:hidden;
+    text-align:left;
+    box-shadow:0 1px 0 rgba(255,255,255,.15), 0 2px 4px rgba(0,0,0,.2) inset, 0 0 12px rgba(255,255,255,.1);
+    padding:8px 20px;
+    background:rgba(0,0,0,.1);
+    border-radius:10px;
+}
+table{
+    table-layout: fixed;
+    margin: 0 auto;
+}
