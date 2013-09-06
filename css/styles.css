@@ -1,12 +1,14 @@
 html, body{ height:100%; }
-body{text-align: center;color: whitesmoke}
+body{
+    text-align: center;
+    color: whitesmoke;
+    background:-webkit-radial-gradient(#205983, #0A2742);
+    background:radial-gradient(#205983, #0A2742);         
+}
 #wrap{
     min-width:600px;
     height:100%;
     position:relative;
-    background:-webkit-radial-gradient(#205983, #0A2742);
-    background:radial-gradient(#205983, #0A2742);
-    overflow:hidden;
 }
 
 @font-face {
@@ -34,7 +36,4 @@ body{text-align: center;color: whitesmoke}
     background:rgba(0,0,0,.1);
     border-radius:10px;
 }
-table{
-    table-layout: fixed;
-    margin: 0 auto;
-}
+table{ margin: 0 auto;}
