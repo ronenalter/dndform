@@ -1,13 +1,15 @@
 html, body{ height:100%; }
+body{
+    background:-webkit-radial-gradient(#205983, #0A2742);
+    background:radial-gradient(#205983, #0A2742);
+}
 body{text-align: center;color: whitesmoke}
 #wrap{
     min-width:600px;
     height:100%;
     position:relative;
-    background:-webkit-radial-gradient(#205983, #0A2742);
-    background:radial-gradient(#205983, #0A2742);
-    overflow:hidden;
 }
+#wrap > div{height: 100%}
 
 @font-face {
   font-family: 'Fjalla One';
@@ -34,7 +36,4 @@ body{text-align: center;color: whitesmoke}
     background:rgba(0,0,0,.1);
     border-radius:10px;
 }
-table{
-    table-layout: fixed;
-    margin: 0 auto;
-}
+table{ margin: 0 auto;}
