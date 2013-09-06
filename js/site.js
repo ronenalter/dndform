@@ -1,6 +1,6 @@
-$(function () {
-    $('div :input[type=text]').not('#pager input').fancyInput()[0].focus();
-    $("#results").tablesorter({ widthFixed: true, widgets: ['zebra'] })
-    .tablesorterPager({container: $("#pager")}); 
+$(function(){
+    $('div :input[type=text]').fancyInput()[0].focus();
+    //$('form').removeClass('fancyInput');
+
 });
 
