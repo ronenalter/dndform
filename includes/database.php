@@ -70,6 +70,3 @@ class MySQLDatabase {
 $database = new MySQLDatabase();
 $database->open_connection();
 $db =& $database;
-
-
-?>
