@@ -5,32 +5,34 @@ $(function () {
     //$('.fancyInput input').numeric();
     // tablesorter
     $("#results").tablesorter({ widthFixed: true, widgets: ['zebra'] });
-    $("#results").tablesorterPager({ container: $("#pager") });
+    //$("#results").tablesorterPager({ container: $("#pager") });
     // form submit
-    $(":submit").click(function () { $("#action").val(this.name); });
-    $('#myForm').submit(validateForm);
+    $(":submit").click(function () { $("#actionType").val(this.name); });
+    $('form').submit(validateForm);
 
 });
 
 function validateForm(){
     // first check for reset
-    var action = $('#action').val();
+    var valid = false;
+    var action = $('#actionType').val();
     if (action == 'clear')
-        return true;
-    if (action == 'submit') {
+        valid = true;
+    else if (action == 'add') {
         var attack = document.getElementById('attack');
         var armor = document.getElementById('armor');
         if (isNumericMulti(armor.value, attack.value)) {
             armor.value = parseInt(armor.value,10);
             attack.value = parseInt(attack.value,10);
             //alert(armor.value + ' ' + attack.value);
-            return true;
+            valid = true;
         }
-        return false;
     }
     else
         alert('WTF?!?');
-    return false;
+
+    //valid = false;
+    return valid;
 }
 
 function isNumeric(txt){

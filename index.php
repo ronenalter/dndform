@@ -4,7 +4,7 @@
     require_once $root.'/includes/database.php';
 
     $armor = $attack = '';
-    if (isset($_POST['submit']) && !empty($_POST['submit'])) {
+    if (isset($_POST['add']) && !empty($_POST['add'])) {
         $armor  = $db->escape_value($_POST['armor']);
         $attack = $db->escape_value($_POST['attack']);
         // query
@@ -42,17 +42,17 @@
     <body>
         <div id="wrap">
             <form action="" method="post" id="myForm">
-                <input type="hidden" name="action" id="action" value="" />
+                <input type="hidden" name="myAction" id="actionType" />
                 <label for="armor">Armor: </label>
                 <div class="fancyInput">
-                    <input id="armor" name="armor" type="number" value="<?php echo $armor?>" />
+                    <input id="armor" name="armor" type="text" value="<?php echo $armor?>" />
                 </div>
                 <label for="attack">Attack: </label>
                 <div class="fancyInput">
-                    <input id="attack" name="attack" type="number" value="<?php echo $attack?>" />
+                    <input id="attack" name="attack" type="text" value="<?php echo $attack?>" />
                 </div>
                 <br>
-                <input type="submit" name="submit" value="Add Record" />
+                <input type="submit" name="add" value="Add Record" />
                 <input type="submit" name="clear" value="Reset" />
             </form>
             <div>

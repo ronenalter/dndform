@@ -1,5 +1,6 @@
 #pager{
     padding: 10px 0;
+    display: none;
 }
 div.tablesorterPager {
 	padding: 10px 0 10px 0;
