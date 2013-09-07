@@ -35,18 +35,21 @@
         <script type="text/javascript" src="js/fancyInput.js"></script>
         <script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
         <script type="text/javascript" src="js/jquery.tablesorter.pager.js"></script>
+        <!--<script type="text/javascript" src="js/jquery.formrestrict.js"></script>
+        <script type="text/javascript" src="js/jquery.alphanumeric.js"></script>-->
         <script type="text/javascript" src="js/site.js"></script>
     </head>
     <body>
         <div id="wrap">
-            <form action="" method="post">
+            <form action="" method="post" id="myForm">
+                <input type="hidden" name="action" id="action" value="" />
                 <label for="armor">Armor: </label>
                 <div class="fancyInput">
-                    <input id="armor" name="armor" type="text" value="<?php echo $armor?>" />
+                    <input id="armor" name="armor" type="number" value="<?php echo $armor?>" />
                 </div>
                 <label for="attack">Attack: </label>
                 <div class="fancyInput">
-                    <input id="attack" name="attack" type="text" value="<?php echo $attack?>" />
+                    <input id="attack" name="attack" type="number" value="<?php echo $attack?>" />
                 </div>
                 <br>
                 <input type="submit" name="submit" value="Add Record" />
